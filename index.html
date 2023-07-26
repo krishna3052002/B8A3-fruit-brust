@@ -10,26 +10,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         .font-lato {
             font-family: 'Lato', sans-serif;
         }
-        :root{
-            background-color:#FFF;
+
+        :root {
+            background-color: #FFF;
         }
-        .radious{
+
+        .radious {
             border-radius: 15px;
         }
-        .input-group>button:hover{
+
+        .input-group>button:hover {
             background-color: #FFF;
+        }
+
+        .input-group> :first-child {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+
+        .input-group> :last-child {
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .background {
+
+            background: linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%);
         }
     </style>
 </head>
 
 <body class="mt-12 mr-48 ml-48 ">
     <header>
-        <nav class="navbar bg-[#F85559] rounded-full">
-            
+        <nav class="container mx-auto navbar bg-[#F85559] rounded-full">
+
             <div class="navbar-start  hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 font-medium text-[#FFF]">
                     <li><a>Home</a></li>
@@ -42,17 +72,71 @@
                 <img class="h-30" src="images/logo.png" alt="">
                 <a class="btn btn-ghost normal-case text-xl text-[#FFF] ">Fruit Burst</a>
             </div>
-            <div class="navbar-end pr-5 rounded-full">
+            <div class="navbar-end pr-5 ">
                 <div class="form-control  ">
-                    <div class="input-group ">
-                      <input class="bg-white pl-4 rounded-lg " type="text" placeholder="Search…"/>
-                      <button class="rounded-lg btn btn-circle border-none bg-white">
-                        <img class="w-6" src="images/search-icon.png" alt="">
-                      </button>
+                    <div class="input-group">
+                        <input class="bg-white pl-4 rounded-lg " type="text" placeholder="Search…" />
+                        <button class=" btn btn-circle border-none bg-white">
+                            <img class="w-6" src="images/search-icon.png" alt="">
+                        </button>
                     </div>
-                  </div>
+                </div>
             </div>
         </nav>
+        <div class=" mt-10 carousel w-full ">
+            <div id="slide1"
+                class="carousel-item relative w-full bg-[url('images/banner1.png')] rounded-xl  background ">
+                <div
+                    class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 items-center ">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <p class="text-7xl text-center text-[#FFF] mb-0">Exotic tastes at your <br>door step <br><span
+                            class=" mt-0 text-xl text-center text-[#FFF]">We supply highly quality organic
+                            products</span><br>
+                        <span><button class="btn btn-primary bg-[#F85559] border-0 ">Shop Now</button></span>
+                    </p>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full bg-[url('images/banner2.png')] rounded-xl background">
+
+                <div
+                    class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 items-center">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <p class="text-7xl text-center text-[#FFF] mb-0">Exotic tastes at your <br>door step <br><span
+                            class=" mt-0 text-xl text-center text-[#FFF]">We supply highly quality organic
+                            products</span><br>
+                        <span><button class="btn btn-primary bg-[#F85559] border-0 ">Shop Now</button></span>
+                    </p>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full bg-[url('images/banner3.png')] rounded-xl background">
+
+                <div
+                    class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 items-center">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <p class="text-7xl text-center text-[#FFF] mb-0">Exotic tastes at your <br>door step <br><span
+                            class=" mt-0 text-xl text-center text-[#FFF]">We supply highly quality organic
+                            products</span><br>
+                        <span><button class="btn btn-primary bg-[#F85559] border-0 ">Shop Now</button></span>
+                    </p>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full bg-[url('images/banner3.png')] rounded-xl background">
+                <img src="/images/banner4.png" class="w-full" />
+                <div
+                    class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 items-center">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <p class="text-7xl text-center text-[#FFF] mb-0">Exotic tastes at your <br>door step <br><span
+                            class=" mt-0 text-xl text-center text-[#FFF]">We supply highly quality organic
+                            products</span><br>
+                        <span><button class="btn btn-primary bg-[#F85559] border-0 ">Shop Now</button></span>
+                    </p>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
 
